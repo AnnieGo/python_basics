@@ -1,0 +1,10 @@
+file_in = open('input.txt', 'r', encoding='utf8')
+result = []
+lines = file_in.readlines()
+for i in range(len(lines)):
+    result.append((lines[i].split()))
+result.sort()
+file_out = open('output.txt', 'w', encoding='utf8')
+for i in range(len(result)):
+    print(result[i][0], result[i][1], result[i][3], file=file_out)
+file_out.close()
